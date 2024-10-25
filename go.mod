@@ -165,3 +165,5 @@ require (
 	sigs.k8s.io/kustomize/kyaml v0.17.1 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
+
+replace github.com/linkerd/linkerd2-proxy-api => github.com/linkerd/linkerd2-proxy-api v0.14.1-0.20241030171301-4e5a650e99d0

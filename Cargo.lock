@@ -1325,7 +1325,7 @@ dependencies = [
 [[package]]
 name = "linkerd2-proxy-api"
 version = "0.14.0"
-source = "git+https://github.com/linkerd/linkerd2-proxy-api?rev=c5648ae2a1e405cc6b8aca20522356ebdf20f1ea#c5648ae2a1e405cc6b8aca20522356ebdf20f1ea"
+source = "git+https://github.com/linkerd/linkerd2-proxy-api.git?branch=alpeb/rate-limiting#4e5a650e99d0086149917ead8deb8d0d7cc93924"
 dependencies = [
  "http",
  "ipnet",
