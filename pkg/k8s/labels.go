@@ -161,6 +161,9 @@ const (
 	// config.
 	ProxyOpaquePortsAnnotation = ProxyConfigAnnotationsPrefix + "/opaque-ports"
 
+	// ProxyPublishUnreadyAnnotation can be used to allow publishing unready pods.
+	ProxyPublishUnreadyAnnotation = ProxyConfigAnnotationsPrefix + "/publish-unready"
+
 	// ProxyIgnoreOutboundPortsAnnotation can be used to override the
 	// ignoreOutboundPorts config.
 	ProxyIgnoreOutboundPortsAnnotation = ProxyConfigAnnotationsPrefix + "/skip-outbound-ports"

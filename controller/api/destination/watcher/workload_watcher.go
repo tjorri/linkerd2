@@ -829,13 +829,19 @@ func isNamedInExternalWorkload(pr string, ew *ext.ExternalWorkload) (int32, bool
 }
 
 func isRunningAndReady(pod *corev1.Pod) bool {
+	publishUnready := false
+	if _, ok := pod.Annotations[consts.ProxyPublishUnreadyAnnotation]; ok {
+		publishUnready = true
+	}
+
 	if pod == nil || pod.Status.Phase != corev1.PodRunning {
 		return false
 	}
 	for _, condition := range pod.Status.Conditions {
-		if condition.Type == corev1.PodReady && condition.Status == corev1.ConditionTrue {
+		if condition.Type == corev1.PodReady && (condition.Status == corev1.ConditionTrue || publishUnready) {
 			return true
 		}
+
 	}
 
 	return false
